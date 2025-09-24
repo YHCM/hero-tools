@@ -159,7 +159,11 @@
     "name": "太阴幽冥爪",
     "category": "拳脚",
     "conflict": [],
-    "insight": [{ "level": 0, "difficulty": 1.8, "cost": 0 }]
+    "insight": [
+      { "level": 0, "difficulty": 1.8, "cost": 0 },
+      { "level": 0, "difficulty": 1.8, "cost": 20 },
+      { "level": 0, "difficulty": 2.0, "cost": 1628 }
+    ]
   },
   {
     "id": 10018,
