@@ -1,5 +1,6 @@
-<script setup lang="ts">
+<script setup>
 import { Calendar, Home, Inbox, Search, Settings } from 'lucide-vue-next'
+import { RouterLink } from 'vue-router'
 import {
   Sidebar,
   SidebarContent,
@@ -14,29 +15,24 @@ import {
 // Menu items.
 const items = [
   {
-    title: 'Home',
-    url: '#',
+    title: '每日暗号',
+    url: '/answer',
     icon: Home,
   },
   {
-    title: 'Inbox',
-    url: '#',
-    icon: Inbox,
-  },
-  {
-    title: 'Calendar',
-    url: '#',
+    title: '真元计算',
+    url: '/answer',
     icon: Calendar,
   },
   {
-    title: 'Search',
-    url: '#',
+    title: '经脉模拟',
+    url: '/answer',
     icon: Search,
   },
   {
-    title: 'Settings',
-    url: '#',
-    icon: Settings,
+    title: '武学列表',
+    url: '/answer',
+    icon: Inbox,
   },
 ]
 </script>
@@ -45,15 +41,15 @@ const items = [
   <Sidebar>
     <SidebarContent>
       <SidebarGroup>
-        <SidebarGroupLabel>Application</SidebarGroupLabel>
+        <SidebarGroupLabel>暴走工具</SidebarGroupLabel>
         <SidebarGroupContent>
           <SidebarMenu>
             <SidebarMenuItem v-for="item in items" :key="item.title">
               <SidebarMenuButton asChild>
-                <a :href="item.url">
+                <RouterLink :to="item.url">
                   <component :is="item.icon" />
                   <span>{{ item.title }}</span>
-                </a>
+                </RouterLink>
               </SidebarMenuButton>
             </SidebarMenuItem>
           </SidebarMenu>

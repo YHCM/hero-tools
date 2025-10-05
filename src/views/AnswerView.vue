@@ -27,7 +27,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="min-h-screen p-4 flex items-center justify-center">
+  <div class="h-full w-full p-4 flex items-center justify-center">
     <!-- 内容容器 - 居中显示 -->
     <div class="w-full max-w-md p-6 border rounded-lg shadow-sm">
       <!-- 暗号显示 -->
