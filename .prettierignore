@@ -9,3 +9,4 @@ dist/
 
 # shadcn 组件
 src/components/ui/
+src/lib/
