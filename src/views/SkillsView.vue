@@ -55,7 +55,7 @@ onMounted(() => {
     </div>
 
     <!-- 技能卡片网格 -->
-    <ScrollArea class="flex-1 overflow-y-auto" style="max-height: calc(100vh - 11rem)">
+    <ScrollArea class="flex-1 overflow-y-auto" style="max-height: calc(100vh - 12rem)">
       <!-- 网格容器布局 -->
       <div class="grid grid-cols-3 gap-3">
         <SkillCard v-for="skill in filteredSkills" :key="skill.id" :skill="skill" />

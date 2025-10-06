@@ -12,6 +12,8 @@ import {
 import { Separator } from '@/components/ui/separator'
 import { useRoute, RouterView } from 'vue-router'
 
+import ThemeToggle from '@/components/custom/ThemeToggle.vue'
+
 // 获取当前路由信息
 const route = useRoute()
 
@@ -31,7 +33,7 @@ const getBreadcrumbs = () => {
     <!-- 右侧主内容区 -->
     <SidebarInset class="flex-1 flex flex-col h-full">
       <!-- 上方触发器和面包屑区域 -->
-      <header class="border-b p-4 flex items-center">
+      <header class="border-b p-4 flex items-center justify-between">
         <div class="flex items-center gap-2 h-4">
           <SidebarTrigger />
           <Separator orientation="vertical" />
@@ -58,6 +60,10 @@ const getBreadcrumbs = () => {
               </template>
             </BreadcrumbList>
           </Breadcrumb>
+        </div>
+
+        <div class="ml-auto">
+          <ThemeToggle />
         </div>
       </header>
 

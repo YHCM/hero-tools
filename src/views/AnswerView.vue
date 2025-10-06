@@ -30,13 +30,16 @@ onMounted(async () => {
   <div class="h-full w-full p-4 flex items-center justify-center">
     <!-- 内容容器 - 居中显示 -->
     <div class="w-full max-w-md p-6 border rounded-lg shadow-sm">
-      <!-- 暗号显示 -->
+      <!-- 问题显示 -->
       <div v-if="ciphertext && !loading" class="text-center p-3 border mb-2 rounded">
         <p>{{ ciphertext }}</p>
       </div>
 
       <!-- 暗号显示 -->
-      <div v-if="answer && !loading" class="text-center p-3 border bg-green-50 rounded">
+      <div
+        v-if="answer && !loading"
+        class="text-center p-3 border bg-green-50 dark:bg-green-900/30 text-gray-800 dark:text-green-100 rounded"
+      >
         <p>{{ answer }}</p>
       </div>
 

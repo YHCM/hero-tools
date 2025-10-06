@@ -1,5 +1,5 @@
 <script setup>
-import { Sun, List, Calculator, CircleDot } from 'lucide-vue-next'
+import { Code, List, Calculator, CircleDot } from 'lucide-vue-next'
 import { RouterLink } from 'vue-router'
 import {
   Sidebar,
@@ -21,7 +21,7 @@ const items = [
   {
     title: '每日暗号',
     url: '/answer',
-    icon: Sun,
+    icon: Code,
   },
   {
     title: '真元计算',
