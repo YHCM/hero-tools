@@ -4,7 +4,13 @@ import AnswerView from '@/views/AnswerView.vue'
 
 const routes = [
   { path: '/', redirect: '/answer' },
-  { path: '/answer', component: AnswerView },
+  {
+    path: '/answer',
+    component: AnswerView,
+    meta: {
+      breadcrumbs: [{ label: '每日暗号', path: '/answer' }],
+    },
+  },
 ]
 
 const router = createRouter({

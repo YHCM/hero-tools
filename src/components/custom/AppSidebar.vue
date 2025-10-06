@@ -1,5 +1,5 @@
 <script setup>
-import { Calendar, Home, Inbox, Search, Settings } from 'lucide-vue-next'
+import { Sun, List, Calculator, CircleDot } from 'lucide-vue-next'
 import { RouterLink } from 'vue-router'
 import {
   Sidebar,
@@ -12,27 +12,27 @@ import {
   SidebarMenuItem,
 } from '@/components/ui/sidebar'
 
-// Menu items.
+// 侧边导航栏
 const items = [
   {
     title: '每日暗号',
     url: '/answer',
-    icon: Home,
+    icon: Sun,
   },
   {
     title: '真元计算',
     url: '/answer',
-    icon: Calendar,
+    icon: Calculator,
   },
   {
     title: '经脉模拟',
     url: '/answer',
-    icon: Search,
+    icon: CircleDot,
   },
   {
     title: '武学列表',
     url: '/answer',
-    icon: Inbox,
+    icon: List,
   },
 ]
 </script>
