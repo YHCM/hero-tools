@@ -1,28 +1,25 @@
 import { createWebHistory, createRouter } from 'vue-router'
 
-import AnswerView from '@/views/AnswerView.vue'
-import SkillsView from '@/views/SkillsView.vue'
-import CalculatorView from '@/views/CalculatorView.vue'
-
+// 动态导入
 const routes = [
   { path: '/', redirect: '/answer' },
   {
     path: '/answer',
-    component: AnswerView,
+    component: () => import('@/views/AnswerView.vue'),
     meta: {
       breadcrumbs: [{ label: '每日暗号', path: '/answer' }],
     },
   },
   {
     path: '/skills',
-    component: SkillsView,
+    component: () => import('@/views/SkillsView.vue'),
     meta: {
       breadcrumbs: [{ label: '武学列表', path: '/skills' }],
     },
   },
   {
     path: '/calculator',
-    component: CalculatorView,
+    component: () => import('@/views/CalculatorView.vue'),
     meta: {
       breadcrumbs: [{ label: '真元计算', path: '/calculator' }],
     },
