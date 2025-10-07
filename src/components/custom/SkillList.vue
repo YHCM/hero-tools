@@ -20,6 +20,17 @@ const props = defineProps({
     type: Number,
     required: true,
   },
+  // 接收开关状态
+  showEssence: {
+    type: Boolean,
+    required: true,
+    default: true,
+  },
+  showCurrentEssence: {
+    type: Boolean,
+    required: true,
+    default: true,
+  },
 })
 
 const emit = defineEmits(['toggle-category', 'update-skill'])
@@ -40,7 +51,7 @@ const handleSkillUpdate = (skillIndex, updatedSkill) => {
     <CollapsibleTrigger as-child>
       <Button
         variant="ghost"
-        class="w-full justify-between p-4 h-auto hover:no-underline"
+        class="w-full justify-between p-3 h-auto hover:no-underline"
         aria-expanded="category.open"
         @click="handleToggle"
       >
@@ -56,7 +67,12 @@ const handleSkillUpdate = (skillIndex, updatedSkill) => {
       <div>
         <template v-for="(skill, skillIndex) in category.skills" :key="skillIndex">
           <Separator v-if="skillIndex > 0" />
-          <SkillListItem :skill="skill" @update:skill="handleSkillUpdate(skillIndex, $event)" />
+          <SkillListItem
+            :skill="skill"
+            :show-essence="showEssence"
+            :show-current-essence="showCurrentEssence"
+            @update:skill="handleSkillUpdate(skillIndex, $event)"
+          />
         </template>
       </div>
     </CollapsibleContent>

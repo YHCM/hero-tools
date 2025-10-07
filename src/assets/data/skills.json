@@ -739,7 +739,7 @@
     "name": "血影步",
     "category": "轻功",
     "conflict": [],
-    "insight": [{ "level": 0, "difficulty": 1.2, "cost": 0 }]
+    "insight": [{ "level": 0, "difficulty": 1.1, "cost": 0 }]
   },
   {
     "id": 70004,

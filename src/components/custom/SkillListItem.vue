@@ -14,6 +14,17 @@ const props = defineProps({
       targetTrueEssence: 0,
     }),
   },
+  // 接收开关状态
+  showEssence: {
+    type: Boolean,
+    required: true,
+    default: true,
+  },
+  showCurrentEssence: {
+    type: Boolean,
+    required: true,
+    default: true,
+  },
 })
 
 const emit = defineEmits(['update:skill'])
@@ -28,25 +39,26 @@ const handleLevelChange = (field, value) => {
 </script>
 
 <template>
-  <div class="p-4 hover:bg-muted/50 transition-colors">
-    <div class="flex items-center gap-2 sm:gap-4 text-sm">
-      <span class="flex-1 font-medium">
+  <div class="p-3 hover:bg-muted/50 transition-colors">
+    <div class="flex items-center gap-1 sm:gap-2 text-sm">
+      <span class="flex-1 font-medium truncate">
         {{ skill.name }}
         <span class="text-muted-foreground"> [{{ skill.difficulty }}] </span>
       </span>
 
-      <span class="w-16 mr-1 sm:w-20 text-right text-sm text-muted-foreground">
-        {{ skill.currentTrueEssence }}
+      <!-- 根据开关状态显示相应的真元值 -->
+      <span v-if="showEssence" class="w-14 sm:w-16 text-right text-sm text-muted-foreground">
+        {{ !showCurrentEssence ? skill.currentTrueEssence : skill.targetTrueEssence }}
       </span>
 
       <NumberField
         :model-value="skill.currentLevel"
         @update:model-value="handleLevelChange('currentLevel', $event)"
-        class="w-12 sm:w-16"
+        class="w-12"
         :min="1"
         :max="621"
       >
-        <NumberFieldContent class="h-8">
+        <NumberFieldContent class="h-7">
           <NumberFieldInput class="text-center text-sm" />
         </NumberFieldContent>
       </NumberField>
@@ -54,11 +66,11 @@ const handleLevelChange = (field, value) => {
       <NumberField
         :model-value="skill.targetLevel"
         @update:model-value="handleLevelChange('targetLevel', $event)"
-        class="w-14 sm:w-16"
+        class="w-12"
         :min="1"
         :max="621"
       >
-        <NumberFieldContent class="h-8">
+        <NumberFieldContent class="h-7">
           <NumberFieldInput class="text-center text-sm" />
         </NumberFieldContent>
       </NumberField>
