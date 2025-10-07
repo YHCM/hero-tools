@@ -2,6 +2,7 @@ import { createWebHistory, createRouter } from 'vue-router'
 
 import AnswerView from '@/views/AnswerView.vue'
 import SkillsView from '@/views/SkillsView.vue'
+import CalculatorView from '@/views/CalculatorView.vue'
 
 const routes = [
   { path: '/', redirect: '/answer' },
@@ -17,6 +18,13 @@ const routes = [
     component: SkillsView,
     meta: {
       breadcrumbs: [{ label: '武学列表', path: '/skills' }],
+    },
+  },
+  {
+    path: '/calculator',
+    component: CalculatorView,
+    meta: {
+      breadcrumbs: [{ label: '真元计算', path: '/calculator' }],
     },
   },
 ]

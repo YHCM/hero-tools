@@ -25,7 +25,7 @@ const items = [
   },
   {
     title: '真元计算',
-    url: '/answer',
+    url: '/calculator',
     icon: Calculator,
   },
   {

@@ -39,7 +39,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="w-full mx-auto h-full flex flex-col border rounded-lg p-4">
+  <div class="w-full mx-auto h-full flex flex-col">
     <!-- 类别筛选 -->
     <div class="flex justify-center mb-6">
       <Select v-model="selectedCategory">
@@ -55,7 +55,7 @@ onMounted(() => {
     </div>
 
     <!-- 技能卡片网格 -->
-    <ScrollArea class="flex-1 overflow-y-auto" style="max-height: calc(100vh - 12rem)">
+    <ScrollArea class="flex-1 overflow-y-auto" style="max-height: calc(100vh - 10rem)">
       <!-- 网格容器布局 -->
       <div class="grid grid-cols-3 gap-3">
         <SkillCard v-for="skill in filteredSkills" :key="skill.id" :skill="skill" />
