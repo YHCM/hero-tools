@@ -37,7 +37,7 @@
   },
   {
     "id": 10004,
-    "name": "镇岳八荒掌",
+    "name": "真龙天罡掌",
     "category": "拳脚",
     "conflict": [10019],
     "insight": [{ "level": 0, "difficulty": 1.5, "cost": 0 }]
@@ -174,7 +174,7 @@
   },
   {
     "id": 10019,
-    "name": "真·镇岳八荒掌",
+    "name": "真·真龙天罡掌",
     "category": "拳脚",
     "conflict": [10004],
     "insight": [{ "level": 0, "difficulty": 2.0, "cost": 0 }]
@@ -206,7 +206,7 @@
   },
   {
     "id": 10023,
-    "name": "万念俱伤掌",
+    "name": "断情殇神掌",
     "category": "拳脚",
     "conflict": [],
     "insight": [{ "level": 0, "difficulty": 2.0, "cost": 0 }]
@@ -399,7 +399,7 @@
   },
   {
     "id": 30009,
-    "name": "涅槃剑法",
+    "name": "无邪剑法",
     "category": "剑法",
     "conflict": [],
     "insight": [
@@ -410,7 +410,7 @@
   },
   {
     "id": 30010,
-    "name": "阴阳无极剑",
+    "name": "真武荡魔剑",
     "category": "剑法",
     "conflict": [],
     "insight": [
@@ -432,7 +432,7 @@
   },
   {
     "id": 30012,
-    "name": "素娥灵犀剑法",
+    "name": "冰清月华剑",
     "category": "剑法",
     "conflict": [],
     "insight": [
@@ -443,7 +443,7 @@
   },
   {
     "id": 30013,
-    "name": "飞雪剑决",
+    "name": "飞雪剑诀",
     "category": "剑法",
     "conflict": [30002],
     "insight": [
@@ -454,7 +454,7 @@
   },
   {
     "id": 30014,
-    "name": "飞天九式剑法",
+    "name": "九天剑诀",
     "category": "剑法",
     "conflict": [],
     "insight": [{ "level": 0, "difficulty": 2.0, "cost": 0 }]
@@ -729,7 +729,7 @@
   },
   {
     "id": 70002,
-    "name": "御风步",
+    "name": "踏风登云步",
     "category": "轻功",
     "conflict": [],
     "insight": [{ "level": 0, "difficulty": 1.2, "cost": 0 }]
@@ -806,7 +806,7 @@
   },
   {
     "id": 70013,
-    "name": "神行鬼步",
+    "name": "神行缥缈步",
     "category": "轻功",
     "conflict": [],
     "insight": [{ "level": 0, "difficulty": 1.4, "cost": 0 }]
@@ -1030,7 +1030,7 @@
   },
   {
     "id": 80030,
-    "name": "无量神功",
+    "name": "玄溟秘术",
     "category": "内功",
     "conflict": [],
     "insight": [{ "level": 0, "difficulty": 2.0, "cost": 0 }]
