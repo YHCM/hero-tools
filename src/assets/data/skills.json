@@ -337,6 +337,13 @@
     "insight": [{ "level": 0, "difficulty": 2.0, "cost": 0 }]
   },
   {
+    "id": 20015,
+    "name": "镖行天下刀法",
+    "category": "刀法",
+    "conflict": [],
+    "insight": [{ "level": 0, "difficulty": 1.6, "cost": 0 }]
+  },
+  {
     "id": 30001,
     "name": "太极剑",
     "category": "剑法",
