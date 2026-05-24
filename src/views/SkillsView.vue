@@ -14,20 +14,16 @@ import { ScrollArea } from '@/components/ui/scroll-area'
 import skillsData from '@/assets/data/skills.json'
 
 // 状态管理
-const allSkills = ref(skillsData)
 const selectedCategory = ref('')
 
-// 计算属性：根据选中的类别过滤技能
-const filteredSkills = computed(() => {
-  return selectedCategory.value
-    ? allSkills.value.filter((skill) => skill.category === selectedCategory.value)
-    : allSkills.value
+// 获取所有技能类别
+const categories = computed(() => {
+  return Object.keys(skillsData)
 })
 
-// 获取所有唯一的技能类别
-const categories = computed(() => {
-  const cats = new Set(allSkills.value.map((skill) => skill.category))
-  return [...cats]
+// 当前选中的技能列表
+const filteredSkills = computed(() => {
+  return selectedCategory.value ? skillsData[selectedCategory.value] || [] : []
 })
 
 // 默认选择第一个类别

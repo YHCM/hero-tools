@@ -92,32 +92,34 @@ const baseMartialArts = computed(() => {
   }
 
   const categories = {}
-  skillsData.forEach((skill) => {
+  Object.entries(skillsData).forEach(([categoryName, skills]) => {
     // 过滤掉"内功"类别
-    if (skill.category === '内功') return
+    if (categoryName === '内功') return
 
-    // 只处理存档中存在的技能
-    const savedSkill = currentSkillsData.value.find((s) => s.id === skill.id)
-    if (!savedSkill) return
+    skills.forEach((skill) => {
+      // 只处理存档中存在的技能
+      const savedSkill = currentSkillsData.value.find((s) => s.id === skill.id)
+      if (!savedSkill) return
 
-    if (!categories[skill.category]) {
-      categories[skill.category] = {
-        category: skill.category,
-        skills: [],
+      if (!categories[categoryName]) {
+        categories[categoryName] = {
+          category: categoryName,
+          skills: [],
+        }
       }
-    }
 
-    const difficulty = getDifficultyByInsightLevel(skill.insight, savedSkill?.insightLevel || 0)
-    const currentLevel = savedSkill?.currentLevel || 1
-    const targetLevel = savedSkill?.targetedLevel || 200
+      const difficulty = getDifficultyByInsightLevel(skill.insight, savedSkill?.insightLevel || 0)
+      const currentLevel = savedSkill?.currentLevel || 1
+      const targetLevel = savedSkill?.targetedLevel || 200
 
-    categories[skill.category].skills.push({
-      id: skill.id,
-      name: skill.name,
-      difficulty,
-      currentLevel,
-      targetLevel,
-      isSaved: !!savedSkill,
+      categories[categoryName].skills.push({
+        id: skill.id,
+        name: skill.name,
+        difficulty,
+        currentLevel,
+        targetLevel,
+        isSaved: !!savedSkill,
+      })
     })
   })
 
